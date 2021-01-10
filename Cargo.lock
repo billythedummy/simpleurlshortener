@@ -247,7 +247,7 @@ dependencies = [
  "socket2",
  "time 0.2.23",
  "tinyvec",
- "url 2.2.0",
+ "url",
 ]
 
 [[package]]
@@ -1635,6 +1635,21 @@ dependencies = [
 ]
 
 [[package]]
+name = "simpleurlshortener"
+version = "0.1.0"
+dependencies = [
+ "actix-web",
+ "askama",
+ "chrono",
+ "deadpool-postgres",
+ "rand",
+ "regex",
+ "serde",
+ "tokio",
+ "tokio-postgres",
+]
+
+[[package]]
 name = "siphasher"
 version = "0.3.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1976,7 +1991,7 @@ dependencies = [
  "smallvec",
  "thiserror",
  "tokio",
- "url 2.2.0",
+ "url",
 ]
 
 [[package]]
@@ -2034,21 +2049,6 @@ name = "unicode-xid"
 version = "0.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f7fe0bb3479651439c9112f72b6c505038574c9fbb575ed1bf3b797fa39dd564"
-
-[[package]]
-name = "url"
-version = "0.1.0"
-dependencies = [
- "actix-web",
- "askama",
- "chrono",
- "deadpool-postgres",
- "rand",
- "regex",
- "serde",
- "tokio",
- "tokio-postgres",
-]
 
 [[package]]
 name = "url"

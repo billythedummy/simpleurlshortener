@@ -1,5 +1,5 @@
 [package]
-name = "url"
+name = "simpleurlshortener"
 version = "0.1.0"
 authors = ["dhy1996 <dhy1996@live.com.sg>"]
 edition = "2018"
