@@ -1,4 +1,5 @@
 use deadpool_postgres::Client;
+use rand::Rng;
 use std::collections::hash_map::DefaultHasher;
 use std::hash::{Hash, Hasher};
 
@@ -10,9 +11,11 @@ pub async fn create_new_hash(client: &Client, user_id: i32, url: &str) -> Result
     let stmt = "INSERT INTO url_hash (hashval, url, app_user_id) VALUES ($1, $2, $3);";
     let pst = client.prepare(stmt).await?;
     // Calculate hash
+    let mut rng = rand::thread_rng();
+    let salt: u64 = rng.gen();
     let mut hasher = DefaultHasher::new();
     url.hash(&mut hasher);
-    let hash_long = hasher.finish();
+    let hash_long = hasher.finish().wrapping_add(salt);
     let hash_long_bytes = hash_long.to_be_bytes();
     let mut hash_bytes = [0; 4];
     hash_bytes.copy_from_slice(&hash_long_bytes[4..]);
