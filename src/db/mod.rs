@@ -28,6 +28,9 @@ pub fn create_db_pool() -> Pool {
     if let Ok(pass) = env::var("PG_PASSWORD") {
         config.password = Some(pass)
     }
+    if let Ok(host) = env::var("PG_HOST") {
+        config.host = Some(host)
+    }
     if let Ok(port_str) = env::var("PG_PORT") {
         if let Ok(port) = port_str.parse::<u16>() {
             config.port = Some(port);
