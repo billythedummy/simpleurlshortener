@@ -1,0 +1,16 @@
+<html>
+<head>
+    <title>Check URL hits</title>
+</head>
+<body style="margin: auto; position: relative; width: 100%; ">
+    <table style="margin: auto; width: 80%; font-size: small; text-align: center;">
+        <thead><th>URL</th><th>Hits</th></thead>
+        {% for entry in list %}
+        <tr>
+            <td style="text-overflow: ellipsis; overflow: hidden; max-width: 100px;">{{ entry.url }}</td>
+            <td>{{ entry.hits }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
