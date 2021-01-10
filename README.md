@@ -8,7 +8,7 @@ Server for implementing a super basic client tracking URL shortener service. act
 
 ## Env Variables
 | name | default value | required? | description |
-|---|---|---|---|---|
+|---|---|---|---|
 | URL_HOST | *empty string* | optional | domain name that this server is serving on |
 | PG_USER | postgres | optional | postgresql user |
 | PG_DB | *same as PG_USER* | optional | postgresql database name |
