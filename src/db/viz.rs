@@ -19,7 +19,7 @@ pub async fn viz_hits(client: &Client, user_id: i32) -> Result<Vec<HitEntry>, Er
             url: url_from_hash(row.get("hashval")),
             hits: match row.get("c") {
                 Some(h) => h,
-                None => 0
+                None => 0,
             },
         })
         .collect::<Vec<HitEntry>>();

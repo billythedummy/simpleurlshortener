@@ -47,7 +47,7 @@ pub fn hash_from_url(hex: &str) -> Result<i32, Error> {
     let mut success = true;
     if hex.len() == 8 {
         for i in 0..4 {
-            buf[i] = match u8::from_str_radix(&hex[2*i..2*i+2], 16) {
+            buf[i] = match u8::from_str_radix(&hex[2 * i..2 * i + 2], 16) {
                 Ok(b) => b,
                 Err(_parse_err) => {
                     success = false;

@@ -31,7 +31,7 @@ async fn hit_page(
                     IpAddr::from(Ipv4Addr::UNSPECIFIED)
                 }
             }
-        },
+        }
         None => {
             eprintln!("No IP address found in client request");
             IpAddr::from(Ipv4Addr::UNSPECIFIED)

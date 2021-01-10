@@ -1642,7 +1642,6 @@ dependencies = [
  "askama",
  "chrono",
  "deadpool-postgres",
- "rand",
  "regex",
  "serde",
  "tokio",
